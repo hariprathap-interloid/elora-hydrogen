@@ -11,6 +11,8 @@
 
 @import "@fontsource-variable/inter";
 
+@import "./fonts.css";
+
 /*---break---
  */
 
@@ -21,9 +23,13 @@
 
 @theme inline {
 
-    --font-heading: var(--font-sans);
-
     --font-sans: 'Inter Variable', sans-serif;
+
+    --font-cormorant-garamond: 'Cormorant Garamond', serif;
+
+    --font-quantify: 'Quantify', sans-serif;
+
+    --font-heading: var(--font-cormorant-garamond);
 
     --color-sidebar-ring: var(--sidebar-ring);
 

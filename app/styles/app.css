@@ -227,17 +227,22 @@ button.reset:hover:not(:has(> *)) {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: transparent;
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
-  position: sticky;
-  top: 0;
+  position: fixed;
   z-index: 1;
 }
 
+.header div {
+  backdrop-filter: blur(8px);
+  filter: drop-shadow(0 0 hsla(0, 0%, 100%, 0.85))
+    drop-shadow(0 0 hsla(0, 0%, 100%, 0.85));
+}
+
 .header-menu-mobile-toggle {
-  @media (min-width: 48em) {
+  @media (min-width: 64em) {
     display: none;
   }
 }
@@ -251,9 +256,9 @@ button.reset:hover:not(:has(> *)) {
 .header-menu-desktop {
   display: none;
   grid-gap: 1rem;
-  @media (min-width: 45em) {
+  @media (min-width: 64em) {
     display: flex;
-    grid-gap: 1rem;
+    grid-gap: 45px;
     margin-left: 3rem;
   }
 }
@@ -265,8 +270,11 @@ button.reset:hover:not(:has(> *)) {
 .header-ctas {
   align-items: center;
   display: flex;
-  grid-gap: 1rem;
+  grid-gap: 18px;
   margin-left: auto;
+  @media (min-width: 45em) {
+    grid-gap: 25px;
+  }
 }
 
 .header-ctas > * {
